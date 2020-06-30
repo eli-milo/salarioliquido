@@ -1,16 +1,127 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ropa+Sans">
+
     <style>
-        
-    </style> 
+        #titulodepagina {
+            text-transform: uppercase;
+            font-family: "Archivo Black";
+            margin: 0px;
+        }
 
-</head> 
+        label.block {
+            display: inherit;
+            margin-bottom: 3px;
 
-<body> 
-    
-    gracias 
-    
+        }
+
+        .encabezado {
+            text-align: left;
+            margin-bottom: 21px;
+        }
+
+        .center {
+            margin: auto;
+            width: 41%;
+            padding: 50px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 1px 4px #beaaaa;
+            margin-top: 50px;
+        }
+
+        #cantidadDeHijosContenedor {
+
+            display: none;
+        }
+
+        form {
+            width: 203px;
+
+        }
+
+        input[type=number] {
+            padding: 6px;
+            background-color: #f1f6f6;
+            border: 1px solid #e7dcdc;
+            border-radius: 3px;
+
+        }
+
+        #buttonSubmit {
+            text-align: center;
+            width: 100%;
+            padding: 19px;
+            border-radius: 2px;
+            border: 0px;
+            background-color: 339d71;
+            color: white;
+            font-family: "ropa sans";
+            font-size: larger;
+
+        }
+
+        label {
+            text-transform: capitalize;
+            font-family: "Ropa Sans";
+        }
+
+        body {
+            background-color: 339d71;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center">
+        <div class="encabezado">
+
+            <h4 id="titulodepagina"><strong>Gracias</strong></h4>
+
+        </div>
+
+        <form action="form.html">
+
+            <div>
+                <label class="block">salario nominal
+                </label>
+
+                <input type="number" name="salarionominal" placeholder="Salario Nominal" />
+            </div>
+
+            <br>
+            <div>
+                <label class="block">salario ticket</label>
+                <input type="number" name="salarioticket" placeholder="Salario Ticket" />
+            </div>
+
+            <br>
+            <div>
+                <label>hijos a cargo</label>
+                <input id="tieneHijos" type="checkbox" name="hijosacargo" onchange="activarNumeroHijos()" />
+
+            </div>
+
+            <br>
+            <div id="cantidadDeHijosContenedor">
+
+                <label class="block">cantidad de hijos</label>
+                <input id="cantidadDeHijos" type="number" name="hijosacargo" placeholder="Cantidad de Hijos" />
+
+            </div>
+
+            <br>
+            <div>
+                <label>conyugue a cargo</label>
+                <input type="checkbox" name="conyugueacargo" />
+            </div>
+            <br>
+            
+        </form>
+    </div>
 </body>
 
 </html>
